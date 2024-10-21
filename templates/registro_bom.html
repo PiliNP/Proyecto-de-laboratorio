@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de BOM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Materiales (BOM)</h1>
+        <form method="POST">
+            <div class="form-group">
+                <label for="componente">Nombre del Componente</label>
+                <input type="text" class="form-control" id="componente" name="componente" required>
+            </div>
+            <div class="form-group">
+                <label for="cantidad_disponible">Cantidad Disponible</label>
+                <input type="number" class="form-control" id="cantidad_disponible" name="cantidad_disponible" required>
+            </div>
+            <div class="form-group">
+                <label for="costo">Costo del Componente</label>
+                <input type="number" class="form-control" id="costo" name="costo" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="lead_time">Lead Time de Entrega</label>
+                <input type="number" class="form-control" id="lead_time" name="lead_time" required>
+            </div>
+            <button type="submit" class="btn btn-success">Registrar Componente</button>
+        </form>
+    </div>
+</body>
+</html>
